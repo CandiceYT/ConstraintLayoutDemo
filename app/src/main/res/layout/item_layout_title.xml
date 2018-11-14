@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:minHeight="10dp"
+                                             android:background="@android:color/holo_green_dark">
 
 
     <TextView
-            android:paddingLeft="10dp"
-            android:text="标题"
-            android:id="@+id/tv_title"
-            android:background="@android:color/holo_green_dark"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:gravity="center_vertical"
-            android:textSize="14sp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="标题"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:visibility="gone" />
 
 
-    <TextView android:layout_width="match_parent"
-              android:text="内容"
-              android:textSize="18sp"
-              android:paddingLeft="20dp"
-              android:visibility="gone"
-              android:gravity="center_vertical"
-              android:background="@android:color/holo_red_dark"
-              app:layout_constraintTop_toBottomOf="@id/tv_title"
-              android:layout_height="50dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="内容"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
 </android.support.constraint.ConstraintLayout>
